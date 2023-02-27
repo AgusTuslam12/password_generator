@@ -4,6 +4,7 @@ let hash = document.getElementById("hash")
 let decrypt = document.getElementById("decrypt")
 let hasilpass = document.getElementById("hasilpass")
 let copyIcon = document.querySelector(".password-box .copy-icon")
+let copyhash = document.querySelector(".hash-pass .copy-hash")
 
 let passwordLength = 12;
 
@@ -54,50 +55,25 @@ function getPassword(){
       }else{
         alert('Password is Missing')
     }
-  
+}
+
 //copy passInput's value on copyIcon click
 //copy passInput's value on copyIcon click
 copyIcon.addEventListener("click", () => {
     navigator.clipboard.writeText(password.value);
     copyIcon.classList.replace("uil-copy", "uil-file-check-alt"); //replace icon
-    // navigator.clipboard.writeText(hash.value);
-    // copyIcon.classList.replace("uil-copy", "uil-file-check-alt"); //replace icon
+     copyIcon.classList.replace("uil-copy", "uil-file-check-alt"); //replace icon
   });
 
-}
+  copyhash.addEventListener("click", () => {
+    navigator.clipboard.writeText(hash.value);
+    copyhash.classList.replace("uil-copy", "uil-file-check-alt"); //replace icon
+  });
+
 function reset(){
     document.getElementById('password').value ='';
     document.getElementById('hash').value = '';
     document.getElementById('decrypt').value = '';
 }
 
-    // if(newPassword){
-    //     var hashed = CryptoJS.SHA256(newPassword)
-    //     hash.value = hashed;
-
-    //     // var decipher = CryptoJS.AES.decrypt(hashed)
-    //     // decrypt.value = decipher
-
-    // }else{
-    //     alert('Password is Missing')
-    // }
-
-    //     setTimeout(() => {
-    //     alert('password has been generated')
-    // }, 200)
-    
-
-
-// const generatePassword = () => {
-//     let newPassword = "";
-  
-//     //for loop will run till rangeInput value
-//     for (let i = 0; i < rangeInput.value; i++) {
-//       let randomNumbers = Math.floor(Math.random() * allCharacters.length);
-//       newPassword += allCharacters[randomNumbers];
-//     }
-//     passwordInput.value = newPassword;
-//     copyIcon.classList.replace("uil-file-check-alt", "uil-copy"); //replace icon
-//   };
-  
 
