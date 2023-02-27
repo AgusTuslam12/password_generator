@@ -1,6 +1,7 @@
 
 let password = document.getElementById("password")
 let hash = document.getElementById("hash")
+let hasilpass = document.getElementById("hasilpass")
 
 let passwordLength = 12;
 
@@ -15,7 +16,6 @@ function generatePassword(){
 
     for(let index = 0; index < passwordLength; index++){
         generator += data[~~(Math.random() * data.length)];
-        
     }
     return generator
 }
@@ -36,17 +36,11 @@ function getPassword(){
     //     setTimeout(() => {
     //     alert('password has been generated')
     // }, 200)
-
-        
-
     
 }
 
 
 function reset(){
-
     document.getElementById('password').value ='';
     document.getElementById('hash').value = '';
-
-
 }
