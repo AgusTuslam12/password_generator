@@ -9,9 +9,9 @@ let copyhash = document.querySelector(".hash-pass .copy-hash")
 let passwordLength = 12;
 
 function generatePassword(){
-     const lowerAlpabet = "abcdefghijklmnopqrstuvwxyz"
-     const upperAlpabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-     const numeric = "0123456789"
+     const lowerAlpabet = "abcdeghijkmnpqrstuvwxyz"
+     const upperAlpabet = "ABCDEGHJKLMNPQRSTUVWXYZ"
+     const numeric = "23456789"
      const symbol = "*#@!"
 
     const data = lowerAlpabet + upperAlpabet + numeric + symbol
